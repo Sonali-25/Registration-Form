@@ -57,6 +57,17 @@ public class registrationform {
             System.out.println("Invalid");
         }
     }
+    public static void toCheckPassword() {
+        String password;
+        System.out.println("Enter password");
+        password = scanner.next();
+        if (Pattern.matches("[\\da-zA-Z]{8,}", password)) {
+            System.out.println("Valid password.");
+        }
+        else {
+            System.out.println("Invalid password.");
+        }
+    }
 
     public static void main(String[] args) {
 
@@ -64,6 +75,7 @@ public class registrationform {
         toCheckLastName();
         toCheckMobile();
         toCheckEmail();
+        toCheckPassword();
         scanner.close();
 
     }
