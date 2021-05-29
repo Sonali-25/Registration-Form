@@ -61,7 +61,7 @@ public class registrationform {
         String password;
         System.out.println("Enter password");
         password = scanner.next();
-        if (Pattern.matches("^(?=.[A-Z])(?=.[0-9])[\\da-zA-Z]{8,}", password)) {
+        if (Pattern.matches("(^(?=.[A-Z])(?=.[0-9])[-_.#@/]{2}([a-z]?).{8,}$", password)) {
             System.out.println("Valid password.");
         }
         else {
