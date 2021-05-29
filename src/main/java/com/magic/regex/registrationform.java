@@ -44,12 +44,26 @@ public class registrationform {
             System.out.println("Invalid.");
         }
     }
+    public static void toCheckEmail() {
+
+        String email;
+        System.out.println("Enter email address: ");
+        email = scanner.next();
+
+        if (Pattern.matches("^([0-9a-zA-Z])+([-+_])(.)?([a-zA-Z0-9])(@){1}[a-z]+(.){1}([a-z]{2,3}(.))*[a-z]{0,3}$", email)) {
+            System.out.println("Valid");
+        }
+        else {
+            System.out.println("Invalid");
+        }
+    }
 
     public static void main(String[] args) {
 
         toCheckFirstName();
         toCheckLastName();
         toCheckMobile();
+        toCheckEmail();
         scanner.close();
 
     }
