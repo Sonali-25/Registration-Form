@@ -33,11 +33,23 @@ public class registrationform {
         }
 
     }
+    public static void toCheckMobile() {
+        String mobile;
+        System.out.println("Enter mobile number in format 91 1234567899");
+        mobile = scanner.nextLine();
+        if (Pattern.matches("\\d{2}[ ][1-9]{1}\\d{9}", mobile)) {
+            System.out.println("Valid.");
+        }
+        else {
+            System.out.println("Invalid.");
+        }
+    }
 
     public static void main(String[] args) {
 
         toCheckFirstName();
         toCheckLastName();
+        toCheckMobile();
         scanner.close();
 
     }
