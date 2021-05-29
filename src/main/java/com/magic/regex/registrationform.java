@@ -61,11 +61,11 @@ public class registrationform {
         String password;
         System.out.println("Enter password");
         password = scanner.next();
-        if (Pattern.matches("[\\da-zA-Z]{8,}", password)) {
-            System.out.println("Valid password.");
+        if (Pattern.matches("^(?=.*[A-Z])[\\da-zA-Z]{8,}", password)) {
+            System.out.println("Valid.");
         }
         else {
-            System.out.println("Invalid password.");
+            System.out.println("Invalid.");
         }
     }
 
