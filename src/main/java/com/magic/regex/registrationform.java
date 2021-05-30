@@ -35,9 +35,11 @@ public class registrationform {
     }
     public static void toCheckMobile() {
         String mobile;
-        System.out.println("Enter mobile number in format 91 1234567899");
-        mobile = scanner.nextLine();
-        if (Pattern.matches("\\d{2}[ ][1-9]{1}\\d{9}", mobile)) {
+        System.out.println("Enter mobile number");
+        mobile = scanner.next();
+
+        if (Pattern.matches("\\d{2}[ ][1-9]{1}\\d{9}$", mobile))
+        {
             System.out.println("Valid.");
         }
         else {
@@ -50,7 +52,8 @@ public class registrationform {
         System.out.println("Enter email address: ");
         email = scanner.next();
 
-        if (Pattern.matches("^([0-9a-zA-Z])+([-+_])(.)?([a-zA-Z0-9])(@){1}[a-z]+(.){1}([a-z]{2,3}(.))*[a-z]{0,3}$", email)) {
+        if (Pattern.matches("^([0-9a-zA-Z])+([-+_])(.)?([a-zA-Z0-9])(@){1}[a-z]+(.){1}([a-z]{2,3}(.))*[a-z]{0,3}$", email))
+        {
             System.out.println("Valid");
         }
         else {
@@ -61,11 +64,11 @@ public class registrationform {
         String password;
         System.out.println("Enter password");
         password = scanner.next();
-        if (Pattern.matches("(^(?=.[A-Z])(?=.[0-9])[-_.#@/]{2}([a-z]?).{8,}$", password)) {
-            System.out.println("Valid password.");
+        if (Pattern.matches("(^(?=.[A-Z])(?=.[0-9])[-_.#@/]{2}([a-z]?).{8,}$)", password)) {
+            System.out.println("Valid.");
         }
         else {
-            System.out.println("Invalid password.");
+            System.out.println("Invalid.");
         }
     }
     public static void main(String[] args) {
